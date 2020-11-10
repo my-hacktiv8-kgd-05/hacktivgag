@@ -1,0 +1,33 @@
+<%- include('refactor/header') %> 
+<main class="container">
+
+	<div class="section">
+		<div style="display: block; width: 100%; overflow-x: auto;">
+			<table class="highlight centered">
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Image</th>
+						<th>Caption</th>
+						<th>Category</th>
+						<th>Published</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% memes.forEach( meme => { %>
+                        <tr>
+                            <td><%= meme.id %></td>
+                            <td><img src="<%= meme.imageURL %>" alt="<%= meme.title %>"></td>
+                            <td><%= meme.createCaption(meme.title, meme.author) %></td>
+                            <td><%= meme.Category.name %></td>
+                            <td><%= Helper.convertPublished(meme.createdAt) %></td>
+                            <td><a href="/memes/<%= meme.id %>/report" class="waves-effect waves-light btn red">Report</a></td>
+                        </tr>
+                    <% }) %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</main>
+<%- include('refactor/footer') %> 

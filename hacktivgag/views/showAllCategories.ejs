@@ -1,0 +1,29 @@
+<%- include('refactor/header') %> 
+<main class="container">
+	<h4 class="center-align">Categories</h4>
+	<div class="section">
+		<div style="display: block; width: 100%; overflow-x: auto;">
+			<table class="highlight centered">
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Name</th>
+						<th>Description</th>
+						<th>Total Memes</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% categories.forEach( category => { %>
+                        <tr>
+                            <td><%= category.id %></td>
+                            <td><%= category.name %></td>
+                            <td><%= category.description %></td>
+                            <td><%= category.Memes.length %></td>
+                        </tr>
+                    <% }) %> 
+				</tbody>
+			</table>
+		</div>
+	</div>
+</main>
+<%- include('refactor/footer') %> 

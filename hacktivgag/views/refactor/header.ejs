@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+	<style>
+		body {
+			display: flex;
+			min-height: 100vh;
+			flex-direction: column;
+		}
+
+		main {
+			flex: 1 0 auto;
+		}
+
+		form div {
+			margin-bottom: 1rem;
+		}
+
+		form label {
+			font-size: 1rem;
+			color: inherit;
+		}
+
+		img {
+			max-width: 200px;
+		}
+	</style>
+
+	<title>HacktivGAG</title>
+</head>
+
+<body>
+	<div class="navbar-fixed" style="margin-bottom: 2rem;">
+		<nav class="black" role="navigation">
+			<div class="nav-wrapper container">
+				<a href="/" class="brand-logo">HacktivGAG</a>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="/categories">Categories</a></li>
+					<li><a href="/memes/reported">Reported</a></li>
+					<li><a href="/memes/add" class="waves-effect waves-light btn blue">Add Meme</a></li>
+				</ul>
+
+				<a href="javascript: void(0);" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+			</div>
+		</nav>
+	</div>
+	<ul id="nav-mobile" class="sidenav">
+		<li class="active"><a href="/categories">Categories</a></li>
+		<li ><a href="/memes/reported">Reported</a></li>
+		<li><a href="/memes/add" class="waves-effect waves-light btn blue">Add Meme</a></li>
+	</ul>
